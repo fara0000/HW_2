@@ -23,29 +23,29 @@
 function getTriangle(n){
     let out = '';
     
-    for(let i = 0; i < n; i++){//stroka(raw)
-        for(let k = 0; k < n; k++){//stolbec(ca)
+    for(let i = 0; i < n; i++) {//stroka(raw)
+        for(let k = 0; k < n; k++) { //stolbec(ca)
             
-            if(i + k < n){
+            if (i + k < n) {
                 out += '*';
-             }
+            }
         }
         out += '\n';
     }
     
     return out;
 }
-    console.log( getTriangle(7) );
+console.log( getTriangle(7) );
 
 //№4(Empty Triangle)
 function getEmptyTriangle(num){
     let out = '';
 
-    for(let i = 0; i < num; i++){
-        for(let k = 0; k < num; k++){
-            if ( ((i + k) === num-1) ||i === 0||k === 0){
+    for(let i = 0; i < num; i++) {
+        for(let k = 0; k < num; k++) {
+            if (((i + k) === num-1) ||i === 0||k === 0) {
                 out += '*';
-            }else{
+            } else {
                 out += ' ';
             }
         }
@@ -57,31 +57,30 @@ function getEmptyTriangle(num){
 console.log( getEmptyTriangle(7) );
 
 //№1(Square)
-function getSquare(num){
+function getSquare(num) {
     let out = '';
 
-    for(let i = 0; i < num; i++){
-        for(let k = 0; k < num; k++){
+    for(let i = 0; i < num; i++) {
+        for(let k = 0; k < num; k++) {
             out += '*'
         }
-            out += '\n'
+        out += '\n'
     }
     
     return out;
 }
 
-    console.log( getSquare(8) );
+console.log( getSquare(8) );
+
 //№2(Empty Square)
-function getEmptySquare(num){
-
+function getEmptySquare(num) {
     let out = '';
 
-    for(let i = 0; i < num; i++){
-        for(let k = 0; k < num; k++){
-            if ( (i === 0) || i === num - 1 || k === 0 || k === num - 1 ){
-                
+    for(let i = 0; i < num; i++) {
+        for(let k = 0; k < num; k++) {
+            if ( (i === 0) || i === num - 1 || k === 0 || k === num - 1 ) {
                 out += '*';
-        }else{
+        } else {
                 out += ' ';
             }
         }
@@ -91,18 +90,19 @@ function getEmptySquare(num){
     return out;
 }
 
-    console.log( getEmptySquare(8) );
+console.log( getEmptySquare(8) );
+
+
 //6 (EmptyHourglass)
-function getEmptyHourglass(num){
-
+function getEmptyHourglass(num) {
     let out = '';
 
-    for(let i = 0; i < num; i++){
-        for(let k = 0; k < num; k++){
-            if ( i === 0 || i === num ||   k === i || (i + k) === (num - 1) || i === num - 1  ){
+    for(let i = 0; i < num; i++) {
+        for(let k = 0; k < num; k++) {
+            if ( i === 0 || i === num ||   k === i || (i + k) === (num - 1) || i === num - 1  ) {
                 
                 out += '*';
-        }else{
+        } else {
                 out += ' ';
             }
         }
@@ -112,18 +112,18 @@ function getEmptyHourglass(num){
     return out;
 }
 
-    console.log( getEmptyHourglass(7) );
+console.log( getEmptyHourglass(7) );
+
 // (Hourglass)
-function getHourglass(num){
-
+function getHourglass(num) {
     let out = '';
 
-    for(let i = 0; i < num; i++){
-        for(let k = 0; k < num; k++){
-            if (i + k === num - 1 || i === k || i < k && i + k < num || k < i && i + k > num - 1){
+    for(let i = 0; i < num; i++) {
+        for(let k = 0; k < num; k++) {
+            if (i + k === num - 1 || i === k || i < k && i + k < num || k < i && i + k > num - 1) {
                 
                 out += '*';
-        }else{
+        } else {
                 out += ' ';
             }
         }
@@ -132,5 +132,4 @@ function getHourglass(num){
     
     return out;
 }
-
-    console.log( getHourglass(7) );
+console.log( getHourglass(7) );
